@@ -3,10 +3,11 @@ include "../db/db.php";
 $success = "";
 $error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $fullname = trim($_POST['fullname']);
-    $phone = trim($_POST['phone']);
-    $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
+$fullname = htmlspecialchars(trim($_POST['fullname']));
+$phone    = htmlspecialchars(trim($_POST['phone']));
+$email    = htmlspecialchars(trim($_POST['email']));
+$password = htmlspecialchars(trim($_POST['password']));
+
 
     
     if(empty($fullname) || empty($phone) || empty($email) || empty($password)){
@@ -27,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO Admin (fullname, phone, email, password, verified) 
+$sql = "INSERT INTO admin (fullname, phone, email, password, verified) 
         VALUES ('$fullname', '$phone', '$email', '$hashedPassword', 1)";
 
  if (mysqli_query($conn, $sql)) {

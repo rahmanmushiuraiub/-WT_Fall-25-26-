@@ -35,6 +35,11 @@
             Already have an account? <a href="../php/login.php">Login</a>
         </div>
     </div>
+     <script>
+        document.querySelector("form").addEventListener("submit", function () {
+            this.reset();
+        });
+    </script>
 
 
 </body>

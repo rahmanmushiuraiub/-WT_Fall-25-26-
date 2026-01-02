@@ -18,7 +18,7 @@ if (empty($email) || empty($password)) {
 
 $check = $conn->prepare(
     "SELECT fullname, phone, email, password, verified 
-     FROM admin WHERE email = ?"
+     FROM Admin WHERE email = ?"
 );
 
 $check->bind_param("s", $email);
