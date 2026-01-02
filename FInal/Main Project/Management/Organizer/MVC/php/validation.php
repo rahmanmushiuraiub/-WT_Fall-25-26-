@@ -1,5 +1,5 @@
 <?php
-include "db/db.php";
+include "../db/db.php";
 $success = "";
 $error = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -33,7 +33,7 @@ $sql = "INSERT INTO Admin (fullname, phone, email, password, verified)
  if (mysqli_query($conn, $sql)) {
         $_SESSION['fullname'] = $fullname;
          $success = "Registration successful!";  
-        header("Location: landinpage.php");
+        header("Location:html/landinpage.php");
         exit;
     } else {
         echo "Database error: " . mysqli_error($conn);

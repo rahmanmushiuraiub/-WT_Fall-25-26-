@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Contact Us - Event Management System</title>
+     <link rel="stylesheet" href="../css/contactus.css">
     
 </head>
 

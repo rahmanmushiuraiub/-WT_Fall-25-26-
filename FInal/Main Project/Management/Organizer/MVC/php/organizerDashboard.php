@@ -16,7 +16,12 @@
             <li>Tickets</li>
             <li>Payments</li>
             <li>Settings</li>
-            <li class="logout">Logout</li>
+
+            <li class="logout">
+    <a href="../php/logout.php">Logout</a>
+</li>
+
+
         </ul>
     </div>
 
