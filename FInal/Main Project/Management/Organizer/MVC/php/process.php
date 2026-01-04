@@ -40,7 +40,7 @@ if ($result->num_rows === 1) {
         $_SESSION['user_name'] = $row['fullname'];
 
     if ($row['email'] === "mushiurrehman1610@gmail.com") {
-    header("Location: organizerDashboard.php");
+    header("Location: php/organizerDashboard.php");
     }    else {
     header("Location: landingpage.php");
     }
