@@ -11,7 +11,7 @@
     <div class="a">
         <h2>Create Account</h2>
 
-        <form method="POST" action="validation.php">
+        <form method="POST" action="../php/validation.php">
             
     <label>Full Name</label>
     <input type="text" name="fullname" placeholder="Enter your name" required>
