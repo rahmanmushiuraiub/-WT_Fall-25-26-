@@ -2,17 +2,19 @@
 <html>
 <head>
     <title>User Registration</title>
-    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href=" ../css/register.css">
     
 </head>
 
 <body>
+    
 
     <div class="a">
         <h2>Create Account</h2>
 
         <form method="POST" action="../php/validation.php">
-            
+
+
     <label>Full Name</label>
     <input type="text" name="fullname" placeholder="Enter your name" required>
 
@@ -25,21 +27,17 @@
     <label>Password</label>
     <input type="password" name="password" placeholder="Create a password" required>
 
-     <center>
-      <input type="submit" value="Submit">
-    </center>
+    <input type="submit" value="register">
 </form>
 
 
+
         <div class="login">
-            Already have an account? <a href="../php/login.php">Login</a>
+            Already have an account? <a href="login.php">Login</a>
         </div>
     </div>
-     <script>
-        document.querySelector("form").addEventListener("submit", function () {
-            this.reset();
-        });
-    </script>
+
+    
 
 
 </body>

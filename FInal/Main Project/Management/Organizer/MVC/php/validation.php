@@ -1,5 +1,5 @@
 <?php
-include "../db/db.php";
+include " ../db/db.php";
  
 $success = "";
 $error = "";
@@ -28,24 +28,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
  
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO admin (fullname, phone, email, password, verified)
-        VALUES ('$fullname',   '$phone', '$email', '$hashedPassword', '1')";
+    $sql = "INSERT INTO organizer (fullname, phone, email, password)
+        VALUES ('$fullname',   '$phone', '$email', '$hashedPassword')";
  
-    if ($conn->query($sql)) {
-        $success = "Registration successful!";  
-        header("Location: ../php/login.php");
-        exit();
- 
-    } else {
-        $error="ERROR ". $conn->error;
-    }
- 
- 
-    $conn->close();
-    echo $success;
-    echo $error;    
-   
- 
- 
+
+if (mysqli_query($conn, $sql)) {
+    //echo "New record created successfully";
+    header("Location:../html/landinpage.php");
+        //exit();
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+}
+else{
+    echo "post error";
+}
+
+mysqli_close($conn);
 ?>

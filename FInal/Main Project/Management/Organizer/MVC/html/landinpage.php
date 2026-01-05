@@ -23,7 +23,7 @@
     <div>
         <h1>Manage your Events Easily.</h1>
         <p>Plan, organize, and manage events effortlessly with our smart event management system.</p>
-        <a href="login.php" class="btn">Get started</a>
+        <a href=" ../php/login.php" class="btn">Get started</a>
     </div>
 </section>
 
