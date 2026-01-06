@@ -12,7 +12,7 @@
 
 
   
-<form method="POST" action="../php/login.php">
+<form method="POST" action=" ../php/process.php">
 
     <center>
         <h2 class="w">Welcome to Event Organization</h2><br><br>
