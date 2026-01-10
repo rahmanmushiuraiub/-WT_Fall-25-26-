@@ -21,3 +21,37 @@
 
         </nav>
     </div>
+ <div class="main">
+     
+        <div class="b">
+            <h1>Organizer Dashboard</h1>
+            <div class="profile">
+                <span>Welcome, Organizer</span>
+                
+                
+            </div>
+        </div>
+
+    <div class="c">
+        <h2>
+            Total Revenue
+        </h2>
+        <p>$12,345</p>
+        
+
+    </div>
+   <div class="d">
+    <h2>Upcoming Events</h2>
+    <?php include "../php/upcomingEvent.php"; ?>
+    </div>
+    </div>
+
+
+
+
+        
+
+   
+
+</body>
+</html>
