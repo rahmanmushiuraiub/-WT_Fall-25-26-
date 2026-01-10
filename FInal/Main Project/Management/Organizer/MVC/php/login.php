@@ -51,3 +51,5 @@ if ($resultOrg->num_rows === 1) {
         die("Invalid email or password");
     }
 }
+die("Invalid email or password");
+?>
