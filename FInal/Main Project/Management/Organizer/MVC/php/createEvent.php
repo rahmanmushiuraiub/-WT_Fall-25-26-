@@ -44,3 +44,14 @@ if (!$result) {
 
         <label>All Approved Users</label>
         <select name="approvedUsers[]" multiple size="6" required>
+            <?php if ($result->num_rows > 0): ?>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <option value="<?= $row['id'] ?>">
+                        <?= htmlspecialchars($row['fullname']) ?> (<?= htmlspecialchars($row['email']) ?>)
+                    </option>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <option disabled>No approved users found</option>
+            <?php endif; ?>
+        </select>
+
