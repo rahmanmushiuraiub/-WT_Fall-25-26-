@@ -54,4 +54,10 @@ if (!$result) {
                 <option disabled>No approved users found</option>
             <?php endif; ?>
         </select>
+<button type="submit">Create Event</button>
+    </form>
+</div>
+
+</body>
+</html>
 
