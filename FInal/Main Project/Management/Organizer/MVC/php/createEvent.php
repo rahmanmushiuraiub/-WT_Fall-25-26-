@@ -25,3 +25,22 @@ if (!$result) {
 
 <div class="event-form">
     <h2>Create Event</h2>
+ <form method="POST" action="../php/createEvent.php">
+
+        <label>Event Name</label>
+        <input type="text" name="eventName" required>
+
+        <label>Date</label>
+        <input type="date" name="eventDate" required>
+
+        <label>Time</label>
+        <input type="time" name="eventTime" required>
+
+        <label>Location</label>
+        <input type="text" name="eventLocation" required>
+
+        <label>Description</label>
+        <textarea name="eventDescription" required></textarea>
+
+        <label>All Approved Users</label>
+        <select name="approvedUsers[]" multiple size="6" required>
