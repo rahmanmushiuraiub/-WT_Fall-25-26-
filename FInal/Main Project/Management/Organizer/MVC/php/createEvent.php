@@ -15,3 +15,13 @@ if (!$result) {
     die("Query Failed: " . $conn->error);
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Event</title>
+    <link rel="stylesheet" href="../css/createEvent.css">
+</head>
+<body>
+
+<div class="event-form">
+    <h2>Create Event</h2>
