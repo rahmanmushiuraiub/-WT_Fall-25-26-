@@ -1,7 +1,6 @@
 <?php
 include("../db/db.php");
 
-// Fetch all events
 $sql = "SELECT eventname, eventtotalperson, eventdetails, eventemail FROM Event";
 $result = $conn->query($sql);
 

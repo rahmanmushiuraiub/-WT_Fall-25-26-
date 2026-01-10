@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Prepare delete query
     $sql = "DELETE FROM Event WHERE eventemail = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $eventEmail);

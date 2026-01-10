@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $conn->prepare("UPDATE Event SET eventname=?, eventtotalperson=?, eventdetails=? WHERE eventemail=?");
     $stmt->bind_param("siss", $eventName, $eventTotalPerson, $eventDetails, $eventEmail);
 
-    // Execute the query
     if ($stmt->execute()) {
         if ($stmt->affected_rows > 0) {
             echo "Event updated successfully!";

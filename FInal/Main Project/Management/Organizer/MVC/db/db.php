@@ -22,7 +22,7 @@ $sql = "CREATE TABLE IF NOT EXISTS organizer (
 
 if (mysqli_query($conn, $sql)) {
     // Table created or already exists
-    echo "create";
+   
 } else {
     echo "Error creating table: " . mysqli_error($conn);
 }

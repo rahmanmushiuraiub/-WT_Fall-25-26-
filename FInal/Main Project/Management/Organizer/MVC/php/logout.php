@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location:../html/landingpage.php");
+header("Location: ../html/landinpage.php");
 exit;
 ?>
