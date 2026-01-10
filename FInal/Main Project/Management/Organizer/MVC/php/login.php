@@ -31,3 +31,23 @@ if ($resultUser->num_rows === 1) {
         die("Invalid email or password");
     }
 }
+//ORGANIZER LOGIN
+$sqlOrg = "SELECT * FROM organizer WHERE email = ?";
+$stmtOrg = $conn->prepare($sqlOrg);
+$stmtOrg->bind_param("s", $email);
+$stmtOrg->execute();
+$resultOrg = $stmtOrg->get_result();
+
+if ($resultOrg->num_rows === 1) {
+    $organizer = $resultOrg->fetch_assoc();
+    if ($password === $organizer['password']) {
+        $_SESSION['id'] = $organizer['id'];
+        $_SESSION['organizer_id'] = $organizer['id'];
+        $_SESSION['organizer_name'] = $organizer['fullname'];
+        $_SESSION['organizer_email'] = $organizer['email'];
+        header("Location: ../../../Organizer/MVC/html/organizerDashboard.php");
+        exit();
+    } else {
+        die("Invalid email or password");
+    }
+}
