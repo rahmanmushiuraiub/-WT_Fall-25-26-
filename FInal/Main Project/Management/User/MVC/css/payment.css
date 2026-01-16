@@ -46,3 +46,33 @@ body {
     border-radius: 6px;
 }
 
+.card label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.card span {
+    float: right;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pay-btn:hover {
+    background: #0056b3;
+}
