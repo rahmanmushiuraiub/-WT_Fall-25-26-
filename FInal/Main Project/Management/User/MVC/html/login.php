@@ -9,13 +9,15 @@
 
 <body>
 
-    
 
 
+  
+<form method="POST" action="../php/login.php">
 
     <center>
-        <fieldset>
+        <h2 class="w">Welcome to Event Organization</h2><br><br>
 
+        <fieldset>
             <legend>Welcome back, please login</legend>
 
             <h2>Login</h2>
@@ -26,7 +28,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="email" placeholder="Enter your email"><br><br>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <br><br>
                     </td>
                 </tr>
 
@@ -35,7 +38,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" name="password" placeholder="Enter your password"><br><br>
+                        <input type="password" name="password" placeholder="Enter your password" required>
+                        <br><br>
                     </td>
                 </tr>
             </table>
@@ -47,5 +51,8 @@
 
         </fieldset>
     </center>
+
+</form>
+
 </body>
 </html>
