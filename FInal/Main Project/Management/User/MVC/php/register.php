@@ -1,8 +1,10 @@
 
 <?php
-include "../includes/db.php";
+include "../db/db.php";
+
 $success = "";
 $error = "";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $fullname = trim($_POST['fullname']);
     $phone = trim($_POST['phone']);
@@ -27,17 +29,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO user (fullname, phone, email, password) VALUES ('$fullname', '$phone', '$email', '$hashedPassword')";
+    $sql = "INSERT INTO user (fullname, phone, email, password)
+        VALUES ('$fullname',   '$phone', '$email', '$hashedPassword')";
 
     if ($conn->query($sql)) {
         $success = "Registration successful!";  
-        
+        header("Location: ../html/login.php");
+        exit();
 
     } else {
         $error="ERROR ". $conn->error;
     }
 
+
     $conn->close();
+    echo $success;
+    echo $error;    
+    
+
+
 }
 ?>
