@@ -8,12 +8,14 @@
 </head>
 
 <body>
+    
 
     <div class="a">
         <h2>Create Account</h2>
 
-        <form method="POST">
-            
+        <form method="POST" action="../php/register.php">
+
+
     <label>Full Name</label>
     <input type="text" name="fullname" placeholder="Enter your name" required>
 
@@ -30,16 +32,14 @@
 </form>
 
 
+
         <div class="login">
             Already have an account? <a href="login.php">Login</a>
         </div>
     </div>
 
     
-<?php
-include "../includes/db.php";
-include "../includes/register.php";
-?>
+
 
 </body>
 </html>
