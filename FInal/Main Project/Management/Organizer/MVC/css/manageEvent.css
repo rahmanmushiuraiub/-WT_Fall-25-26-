@@ -48,4 +48,18 @@ tr:hover {
     border: none;
 }
 
+.accept-btn {
+    background-color: #28a745;
+    border: 1px solid #1e7e34;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    border: 1px solid #bd2130;
+}
+
+.action-btn:hover {
+    opacity: 0.85;
+}
+
 
