@@ -15,7 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "UPDATE event_requests SET status='$status' WHERE event_id=$event_id";
 
-    
+    if ($conn->query($sql)) { 
+        echo "<script>
+                alert('Event request updated successfully!');
+                window.location.href='../html/manageEvent.php';
+              </script>";
+    } else {
+        echo "Error: " . $conn->error;
+    }
 
     $conn->close();
 }
