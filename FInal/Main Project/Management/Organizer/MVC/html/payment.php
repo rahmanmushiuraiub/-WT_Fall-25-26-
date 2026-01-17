@@ -26,7 +26,24 @@
         <p><strong>Phone:</strong> 01XXXXXXXXX</p>
     </div>
 
-    
+    <!-- Transaction Check -->
+    <div class="card">
+        <h3>Transaction Verification</h3>
+
+        <label>Payment Method</label>
+        <select>
+            <option>bKash</option>
+            <option>Nagad</option>
+            <option>Rocket</option>
+            <option>Bank Transfer</option>
+        </select>
+
+        <label>Transaction ID</label>
+        <input type="text" placeholder="Enter Transaction ID">
+
+        <label>Paid Amount</label>
+        <input type="text" placeholder="৳1600" readonly>
+    </div>
 
     <!-- Action Buttons -->
     <div class="action-btns">
