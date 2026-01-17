@@ -19,6 +19,20 @@ echo "<tr>
         <th>Description</th>
       </tr>";
 
+// Loop through results
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . htmlspecialchars($row['event_id']) . "</td>"; // changed id → event_id
+        echo "<td>" . htmlspecialchars($row['event_name']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['event_date']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['event_location']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['event_description']) . "</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "<tr><td colspan='5' style='text-align:center;'>No upcoming events</td></tr>";
+}
 
 echo "</table>";
 
