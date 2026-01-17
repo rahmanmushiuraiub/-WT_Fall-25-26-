@@ -1,6 +1,7 @@
 <?php
 session_start();
+session_unset();
 session_destroy();
-header("Location: ../html/landinpage.php");
-exit;
+header("Location: ../../../User/MVC/html/login.php");
+exit();
 ?>
