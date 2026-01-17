@@ -73,3 +73,21 @@ input, select {
     cursor: pointer;
 }
 
+.reject-btn {
+    flex: 1;
+    padding: 12px;
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify-btn:hover {
+    background: #218838;
+}
+
+.reject-btn:hover {
+    background: #c82333;
+}
