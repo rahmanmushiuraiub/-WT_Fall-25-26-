@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($fullname) || empty($email) || empty($phone)) {
         $message = "All fields are required";
     } else {
-        
+        $update_sql = "UPDATE organizer SET fullname = '$fullname', email = '$email', phone = '$phone' WHERE id = $organizer_id";
         
         if ($conn->query($update_sql)) {
             $_SESSION['organizer_name'] = $fullname;
