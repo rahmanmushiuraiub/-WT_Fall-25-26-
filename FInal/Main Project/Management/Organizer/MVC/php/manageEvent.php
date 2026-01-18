@@ -88,7 +88,11 @@ $result = mysqli_query($conn, "SELECT * FROM event_requests WHERE status='Pendin
                         </form>
 
                         <!-- Reject -->
-                        
+                        <form method="POST" style="display:inline;">
+                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                            <input type="hidden" name="action" value="reject">
+                            <button type="submit" class="reject-btn" onclick="return confirm('Reject this request?')">Reject</button>
+                        </form>
                     </td>
                 </tr>
             <?php endwhile; ?>
