@@ -73,7 +73,13 @@ $result = mysqli_query($conn, "SELECT * FROM event_requests WHERE status='Pendin
         <?php if ($result && mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
                 <tr>
-                    
+                    <td><?= htmlspecialchars($row['id']) ?></td>
+                    <td><?= htmlspecialchars($row['user_name']) ?></td>
+                    <td><?= htmlspecialchars($row['event_name']) ?></td>
+                    <td><?= htmlspecialchars($row['event_date']) ?></td>
+                    <td><?= htmlspecialchars($row['event_location']) ?></td>
+                    <td><?= htmlspecialchars($row['event_description']) ?></td>
+                    <td>
                         <!-- Accept -->
                         <form method="POST" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $row['id'] ?>">
