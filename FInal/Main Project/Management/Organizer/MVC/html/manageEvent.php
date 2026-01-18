@@ -10,7 +10,15 @@ $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'
 ?>
 <!DOCTYPE html>
 
+<body>
 
+
+    <div class="main-content">
+        
+        
+        <?php include "../php/manageEvent.php"; ?>
+    </div>
+</div>
 
 </body>
 </html>
