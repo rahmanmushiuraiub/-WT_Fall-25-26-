@@ -26,7 +26,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['action'
         $status = null;
     }
 
-    
+    if ($status) {
+        
+        $query = "UPDATE event_requests SET status = '$status' WHERE id = $id";
+        if (mysqli_query($conn, $query)) {
+            
+            header("Location: manageEvent.php");
+            exit();
+        } else {
+            die("Error updating status: " . mysqli_error($conn));
+        }
+    }
 }
 
 
