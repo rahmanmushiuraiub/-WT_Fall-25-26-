@@ -27,3 +27,34 @@ if ($selected_event_id > 0) {
     }
 }
 
+// Handle payment verification
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $transaction_id = trim($_POST['transaction_id'] ?? '');
+    $event_id       = intval($_POST['event_id'] ?? 0);
+
+    if ($transaction_id === '' || $event_id <= 0) {
+        $verification_message = " Invalid transaction ID or event.";
+    } else {
+
+        // Check transaction ID in payments table
+        $stmt = $conn->prepare(
+            "SELECT id 
+             FROM payments 
+             WHERE transaction_id = ? AND event_id = ?"
+        );
+        $stmt->bind_param("si", $transaction_id, $event_id);
+        $stmt->execute();
+        $check = $stmt->get_result();
+
+        if ($check->num_rows > 0) {
+            $verification_message = " Payment verified successfully.";
+        } else {
+            $verification_message = " Payment not found. Invalid transaction ID.";
+        }
+
+        $stmt->close();
+    }
+}
+
+?>
