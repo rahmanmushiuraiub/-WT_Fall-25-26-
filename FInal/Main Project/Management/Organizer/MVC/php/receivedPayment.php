@@ -17,15 +17,7 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
-// If event is selected show payment details
-if ($selected_event_id > 0) {
-    $event_query = "SELECT id, event_name, event_date, event_location, event_cost, user_name FROM event_requests WHERE id = $selected_event_id AND status = 'Accepted'";
-    $event_result = $conn->query($event_query);
-    
-    if ($event_result && $event_result->num_rows > 0) {
-        $payment_details = $event_result->fetch_assoc();
-    }
-}
+
 
 // Handle payment verification
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
