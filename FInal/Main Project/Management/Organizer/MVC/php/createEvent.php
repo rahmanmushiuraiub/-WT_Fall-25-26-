@@ -45,5 +45,24 @@ $stmt->bind_param(
     $status
 );
 
+if ($stmt->execute()) {
+    $eventId = $stmt->insert_id;
+
+    
+    $userSql = "INSERT INTO event_users (event_id, user_id, booking_status)
+                VALUES (?, ?, 'Ongoing')";
+    $userStmt = $conn->prepare($userSql);
+
+    foreach ($approvedUsers as $userId) {
+        $userId = intval($userId);
+        $userStmt->bind_param("ii", $eventId, $userId);
+        $userStmt->execute();
+    }
+
+    header("Location: ../html/organizerDashboard.php?success=event_created");
+    exit();
+} else {
+    echo "Error creating event.";
+}
 
 $conn->close();
