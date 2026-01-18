@@ -27,6 +27,11 @@ if ($resultUser->num_rows === 1) {
         $_SESSION['user_name'] = $user['fullname'];
         $_SESSION['user_email'] = $user['email'];
 
+        // Set cookie for user login (expires in 30 days)
+        setcookie('user_id', $user['id'], time() + (30 * 24 * 60 * 60), '/');
+        setcookie('user_name', $user['fullname'], time() + (30 * 24 * 60 * 60), '/');
+        setcookie('user_email', $user['email'], time() + (30 * 24 * 60 * 60), '/');
+
         header("Location: ../html/userDashboard.php");
         exit();
     } else {
@@ -48,13 +53,19 @@ if ($resultOrg->num_rows === 1) {
         $_SESSION['organizer_id'] = $organizer['id'];
         $_SESSION['organizer_name'] = $organizer['fullname'];
         $_SESSION['organizer_email'] = $organizer['email'];
+
+        // Set cookie for organizer login (expires in 30 days)
+        setcookie('organizer_id', $organizer['id'], time() + (30 * 24 * 60 * 60), '/');
+        setcookie('organizer_name', $organizer['fullname'], time() + (30 * 24 * 60 * 60), '/');
+        setcookie('organizer_email', $organizer['email'], time() + (30 * 24 * 60 * 60), '/');
+
         header("Location: ../../../Organizer/MVC/html/organizerDashboard.php");
         exit();
     } else {
         die("Invalid email or password");
     }
 }
-// If no match found
+
 
 die("Invalid email or password");
 ?>

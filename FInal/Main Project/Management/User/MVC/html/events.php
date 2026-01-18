@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Organized Events - Event Management System</title>
+    <title>View Events</title>
+    <link rel="stylesheet" href="../css/userDashboard.css">
     <link rel="stylesheet" href="../css/event.css">
 </head>
-
 <body>
 
-    <div class="a">
-        <h1>Organized Events</h1>
-        <p>Events currently organized by our system</p>
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+$username = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Guest';
+?>
+
+<div class="navbar">
+    <h2>Event Management System</h2>
+    <div class="nav-links">
+        <span>Welcome, <strong><?php echo htmlspecialchars($username); ?></strong>!</span>
+        <a href="../php/logout.php" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        <a href="dashboard.php">Dashboard</a>
+        <a href="events.php" class="active">View Events</a>
+        <a href="myBookings.php">My Bookings</a>
+        <a href="requestEvent.php">Request Event</a>
+        <a href="payment.php">Payment</a>
     </div>
 
-    <div class="b">
+    <div class="main-content">
+        <h2>Organized Events</h2>
+        <p>Events currently organized by our system</p>
+
+        <div class="events-grid">
 
         <div class="event">
             <h3>Corporate Seminar</h3>
@@ -82,13 +107,9 @@
             <p>Location: Shilpakala Academy</p>
             <p>Organizer: Event Management Team</p>
         </div>
+        </div>
     </div>
-    <div class="c">
-        What are you waiting for? <a href="login.php">Join us now!</a>
-    </div>
-    
-    
-    
+</div>
 
 </body>
 </html>
