@@ -39,10 +39,7 @@ $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'
                     <input type="text" name="fullname" value="<?= htmlspecialchars($organizer['fullname']) ?>" required>
                 </div>
 
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" name="email" value="<?= htmlspecialchars($organizer['email']) ?>" required>
-                </div>
+                <
 
                 <div class="form-group">
                     <label>Phone:</label>
