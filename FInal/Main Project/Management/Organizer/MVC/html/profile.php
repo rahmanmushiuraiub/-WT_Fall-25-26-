@@ -9,6 +9,13 @@ if (!isset($_SESSION['organizer_id'])) {
 $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'] : 'Organizer';
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organizer Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
 
 
 
