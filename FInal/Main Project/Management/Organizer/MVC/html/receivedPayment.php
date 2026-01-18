@@ -79,15 +79,7 @@ $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'
                         <input type="text" value="<?= htmlspecialchars($payment_details['event_cost']) ?>" readonly>
                     </div>
 
-                    <form method="POST">
-                        <div class="form-group">
-                            <label>Transaction ID:</label>
-                            <input type="text" name="transaction_id" placeholder="Enter transaction ID to verify" required>
-                        </div>
-
-                        <input type="hidden" name="event_id" value="<?= $selected_event_id ?>">
-                        <button type="submit" class="verify-btn">Verify Payment</button>
-                    </form>
+                    
                 </div>
             <?php else: ?>
                 <div style="background: white; padding: 20px; border-radius: 4px; text-align: center; color: #666;">
