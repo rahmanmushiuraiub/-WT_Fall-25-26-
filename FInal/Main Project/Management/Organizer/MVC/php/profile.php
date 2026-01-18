@@ -20,7 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $update_sql = "UPDATE organizer SET fullname = '$fullname', email = '$email', phone = '$phone' WHERE id = $organizer_id";
         
-        
+        if ($conn->query($update_sql)) {
+            $_SESSION['organizer_name'] = $fullname;
+            $_SESSION['organizer_email'] = $email;
+            $message = "Profile updated successfully!";
+            $organizer['fullname'] = $fullname;
+            $organizer['email'] = $email;
+            $organizer['phone'] = $phone;
+        } else {
+            $message = "Error updating profile: " . $conn->error;
+        }
     }
 }
 ?>
