@@ -47,7 +47,14 @@ $result = mysqli_query($conn, "SELECT * FROM event_requests WHERE status='Pendin
 <html>
 <head>
     <title>Manage Event Requests</title>
-    
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #3498db; color: white; }
+        tr:hover { background: #f5f5f5; }
+        .accept-btn { background: #27ae60; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+        .reject-btn { background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+    </style>
 </head>
 <body>
     <h2>Pending Event Requests</h2>
