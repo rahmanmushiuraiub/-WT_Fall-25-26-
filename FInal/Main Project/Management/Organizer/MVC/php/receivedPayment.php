@@ -8,14 +8,6 @@ $payment_details = null;
 $selected_event_id = isset($_GET['event_id']) ? intval($_GET['event_id']) : 0;
 
 // Fetch accepted events
-$query = "SELECT id, event_name, event_date, event_location, event_cost FROM event_requests WHERE status = 'Accepted' ORDER BY event_name ASC";
-$result = $conn->query($query);
-
-if ($result && $result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $events[] = $row;
-    }
-}
 
 // If event is selected show payment details
 if ($selected_event_id > 0) {
