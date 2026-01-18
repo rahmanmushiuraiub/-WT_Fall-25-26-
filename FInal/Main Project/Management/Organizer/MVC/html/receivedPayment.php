@@ -31,20 +31,7 @@ $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'
                 <button onclick="filterEvents()">Search</button>
             </div>
 
-            <!-- Events List -->
-            <div class="events-list">
-                <h3>Accepted Events</h3>
-                <?php if (!empty($events)): ?>
-                    <?php foreach ($events as $event): ?>
-                        <div class="event-item <?= ($selected_event_id == $event['id']) ? 'selected' : '' ?>" onclick="selectEvent(<?= $event['id'] ?>)">
-                            <strong><?= htmlspecialchars($event['event_name']) ?></strong> - <?= htmlspecialchars($event['event_date']) ?> (<?= htmlspecialchars($event['event_location']) ?>) - ৳<?= htmlspecialchars($event['event_cost']) ?>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p style="text-align: center; color: #666;">No accepted events found.</p>
-                <?php endif; ?>
-            </div>
-
+            
             
             <?php if ($payment_details): ?>
                 <div class="payment-form">
