@@ -36,7 +36,13 @@ VALUES (?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($eventSql);
 $stmt->bind_param(
-    
+    "ssssss",
+    $eventName,
+    $eventDate,
+    $eventTime,
+    $eventLocation,
+    $eventDescription,
+    $status
 );
 
 if ($stmt->execute()) {
