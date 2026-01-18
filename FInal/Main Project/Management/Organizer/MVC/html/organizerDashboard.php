@@ -35,7 +35,14 @@ $organizerName = isset($_SESSION['organizer_name']) ? $_SESSION['organizer_name'
    
     <div class="main">
      
-       
+        <div class="b">
+            <h1>Organizer Dashboard</h1>
+            <div class="profile">
+                <span>Welcome, <?php echo htmlspecialchars($organizerName); ?></span>
+                
+                
+            </div>
+        </div>
 
     <div class="c">
         <h2>
