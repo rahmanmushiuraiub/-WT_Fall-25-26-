@@ -3,7 +3,7 @@
 <head>
     <title>View Events</title>
     <link rel="stylesheet" href="../css/userDashboard.css">
-    <link rel="stylesheet" href="../css/event.css">
+    <link rel="stylesheet" href="../css/events.css">
 </head>
 <body>
 
@@ -12,7 +12,7 @@
 <div class="navbar">
     <h2>Event Management System</h2>
     <div class="nav-links">
-        <span>Welcome, <strong><?php echo htmlspecialchars($username); ?></strong>!</span>
+       <span>Welcome, <strong>User</strong>!</span>
         <a href="../php/logout.php" class="logout-btn">Logout</a>
     </div>
 </div>

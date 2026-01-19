@@ -46,7 +46,7 @@
 
             <center>
                 <input type="submit" class="button" value="Login">
-                <a href="register.php" class="button">Register</a>
+             
             </center>
 
         </fieldset>
