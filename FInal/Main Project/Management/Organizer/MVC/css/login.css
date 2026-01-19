@@ -1,0 +1,81 @@
+body{
+            background-color: rgb(255, 255, 255);
+            font-family: "Times New Roman", sans-serif;
+        }
+
+        fieldset{
+            width: 400px;
+            margin-top: 80px;
+            padding: 20px;
+            border-radius: 5px;
+            border: #4d9ba8 2px solid;
+            background-color: #e6f7fa;
+        }
+
+        legend{
+            text-align: center;
+            font-size: 18px;
+            color: black;
+        }
+
+        h2{
+            text-align: center;
+            color: black;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .a, .b{
+            font-size: 18px;
+            color: black;
+        }
+
+        input[type="email"],
+        input[type="password"]{
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button{
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            text-decoration: none;
+        }
+        .button:hover{
+            background-color: #333;
+        }
+        .w{
+            font-size: 24px;
+            color: black;
+            border: #4d9ba8 2px solid;
+            width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+
+            }
+        
+        .error{
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .success{
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+
+        
+       
+
+        
